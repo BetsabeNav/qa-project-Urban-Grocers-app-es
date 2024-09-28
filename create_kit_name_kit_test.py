@@ -16,7 +16,8 @@ def positive_assert(kit_name):
 
 
   assert user_response.status_code == 201
-  assert user_response.json()["authToken"] != ""
+  assert user_response.json(data.user_body)["name"]
+  assert response.json()["message"] == "El campo \"name\" del cuerpo de la respuesta coincide con el campo \"name\" del cuerpo de la solicitud."
 
 
 
